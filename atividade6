@@ -1,0 +1,299 @@
+#Exercício 1
+
+n1 = float(input("Digite o primeiro número: "))
+n2 = float(input("Digite o segundo número: "))
+
+if n1 > n2:
+    print(n1)
+else:
+    print(n2)
+
+#Exercício 2
+
+valor = float(input("Digite um valor: "))
+
+if valor >= 0:
+    print("Positivo")
+else:
+    print("Negativo")
+
+#Exercício 3 
+
+letra = input("Digite F ou M: ").upper()
+
+if letra == "F":
+    print("Feminino")
+elif letra == "M":
+    print("Masculino")
+else:
+    print("Sexo Inválido")
+
+#Exercício 4
+
+letra = input("Digite uma letra: ").lower()
+
+if letra in "aeiou":
+    print("Vogal")
+else:
+    print("Consoante")
+
+#Exercício 5
+
+n1 = float(input("Nota 1: "))
+n2 = float(input("Nota 2: "))
+
+media = (n1 + n2) / 2
+
+if media == 10:
+    print("Aprovado com Distinção")
+elif media >= 7:
+    print("Aprovado")
+else:
+    print("Reprovado")
+
+#Exercício 6
+
+n1 = float(input("Digite o primeiro número: "))
+n2 = float(input("Digite o segundo número: "))
+n3 = float(input("Digite o terceiro número: "))
+
+maior = n1
+
+if n2 > maior:
+    maior = n2
+
+if n3 > maior:
+    maior = n3
+
+print("O maior número é:", maior)
+
+#Exercício 7
+
+n1 = float(input("Digite o primeiro número: "))
+n2 = float(input("Digite o segundo número: "))
+n3 = float(input("Digite o terceiro número: "))
+
+maior = n1
+menor = n1
+
+if n2 > maior:
+    maior = n2
+
+if n3 > maior:
+    maior = n3
+
+if n2 < menor:
+    menor = n2
+
+if n3 < menor:
+    menor = n3
+
+print("Maior número:", maior)
+print("Menor número:", menor)
+
+#exercício 8
+
+p1 = float(input("Digite o preço do primeiro produto: "))
+p2 = float(input("Digite o preço do segundo produto: "))
+p3 = float(input("Digite o preço do terceiro produto: "))
+
+if p1 <= p2 and p1 <= p3:
+    print("Você deve comprar o primeiro produto.")
+elif p2 <= p1 and p2 <= p3:
+    print("Você deve comprar o segundo produto.")
+else:
+    print("Você deve comprar o terceiro produto.")
+
+#Exercício 9
+
+# Lê três números
+n1 = float(input("Digite o primeiro número: "))
+n2 = float(input("Digite o segundo número: "))
+n3 = float(input("Digite o terceiro número: "))
+
+# Coloca em ordem decrescente
+if n1 >= n2 and n1 >= n3:
+    if n2 >= n3:
+        print(n1, n2, n3)
+    else:
+        print(n1, n3, n2)
+
+elif n2 >= n1 and n2 >= n3:
+    if n1 >= n3:
+        print(n2, n1, n3)
+    else:
+        print(n2, n3, n1)
+
+else:
+    if n1 >= n2:
+        print(n3, n1, n2)
+    else:
+        print(n3, n2, n1)
+
+#Exercício 10
+
+turno = input("Digite M, V ou N: ").upper()
+
+if turno == "M":
+    print("Bom Dia!")
+elif turno == "V":
+    print("Boa Tarde!")
+elif turno == "N":
+    print("Boa Noite!")
+else:
+    print("Valor Inválido!")
+
+#Exercício 11
+
+salario = float(input("Salário: "))
+
+if salario <= 280:
+    percentual = 20
+elif salario <= 700:
+    percentual = 15
+elif salario <= 1500:
+    percentual = 10
+else:
+    percentual = 5
+
+aumento = salario * percentual / 100
+novo = salario + aumento
+
+print("Salário antes:", salario)
+print("Percentual:", percentual, "%")
+print("Aumento:", aumento)
+print("Novo salário:", novo)
+
+#Exercício 12 
+
+valor_hora = float(input("Valor da hora: "))
+horas = float(input("Horas trabalhadas: "))
+
+salario_bruto = valor_hora * horas
+
+if salario_bruto <= 900:
+    ir = 0
+elif salario_bruto <= 1500:
+    ir = 5
+elif salario_bruto <= 2500:
+    ir = 10
+else:
+    ir = 20
+
+ir_valor = salario_bruto * ir / 100
+inss = salario_bruto * 0.10
+fgts = salario_bruto * 0.11
+
+descontos = ir_valor + inss
+liquido = salario_bruto - descontos
+
+print("Salário Bruto:", salario_bruto)
+print("IR:", ir_valor)
+print("INSS:", inss)
+print("FGTS:", fgts)
+print("Total descontos:", descontos)
+print("Salário Líquido:", liquido)
+
+#Exercício 13
+
+dia = int(input("Digite um número de 1 a 7: "))
+
+dias = {
+    1: "Domingo",
+    2: "Segunda",
+    3: "Terça",
+    4: "Quarta",
+    5: "Quinta",
+    6: "Sexta",
+    7: "Sábado"
+}
+
+print(dias.get(dia, "Valor inválido"))
+
+#Exercício 14
+
+nota1 = float(input("Digite a primeira nota: "))
+nota2 = float(input("Digite a segunda nota: "))
+
+media = (nota1 + nota2) / 2
+
+if media >= 9:
+    conceito = "A"
+elif media >= 7.5:
+    conceito = "B"
+elif media >= 6:
+    conceito = "C"
+elif media >= 4:
+    conceito = "D"
+else:
+    conceito = "E"
+
+if conceito == "A" or conceito == "B" or conceito == "C":
+    resultado = "APROVADO"
+else:
+    resultado = "REPROVADO"
+
+print("Primeira nota:", nota1)
+print("Segunda nota:", nota2)
+print("Média:", media)
+print("Conceito:", conceito)
+print("Resultado:", resultado)
+
+#Exercício 15
+
+lado1 = float(input("Digite o primeiro lado: "))
+lado2 = float(input("Digite o segundo lado: "))
+lado3 = float(input("Digite o terceiro lado: "))
+
+if (lado1 + lado2 > lado3) and \
+   (lado1 + lado3 > lado2) and \
+   (lado2 + lado3 > lado1):
+
+    print("Os valores formam um triângulo.")
+
+    if lado1 == lado2 == lado3:
+        print("Triângulo Equilátero")
+
+    elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:
+        print("Triângulo Isósceles")
+
+    else:
+        print("Triângulo Escaleno")
+
+else:
+    print("Os valores não formam um triângulo.")
+
+#Exercício 16
+
+import math
+
+a = float(input("A: "))
+
+if a == 0:
+    print("Não é equação do segundo grau")
+else:
+    b = float(input("B: "))
+    c = float(input("C: "))
+
+    delta = b**2 - 4*a*c
+
+    if delta < 0:
+        print("Não possui raízes reais")
+    elif delta == 0:
+        x = -b / (2*a)
+        print("Raiz única:", x)
+    else:
+        x1 = (-b + math.sqrt(delta)) / (2*a)
+        x2 = (-b - math.sqrt(delta)) / (2*a)
+
+        print("x1 =", x1)
+        print("x2 =", x2)
+
+#Exercívio 17 
+
+ano = int(input("Digite um ano: "))
+
+if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
+    print("O ano é bissexto.")
+else:
+    print("O ano não é bissexto.")
